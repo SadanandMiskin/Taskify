@@ -6,6 +6,7 @@ import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import TodoList from './components/Todo/TodoList';
 import OAuthCallback from '../src/components/OAuthCallback';
+import LoadingSpinner from './components/LoadingSpinner.jsx';
 
 const App = () => {
   return (
@@ -18,8 +19,9 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/oauth/callback" element={<OAuthCallback />} />
+            <Route path="/l" element={LoadingSpinner} />
           </Routes>
-          <footer><div className='foot'><h4>Sadanand Miskin</h4></div></footer>
+          {/* <footer><div className='foot'><h4>Sadanand Miskin</h4></div></footer> */}
         </div>
       </Router>
     </AuthProvider>
